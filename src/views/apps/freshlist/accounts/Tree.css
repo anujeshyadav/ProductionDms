@@ -1,0 +1,25 @@
+.app-container {
+    font-family: 'Arial', sans-serif;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.tree-node {
+    margin-bottom: 5px;
+}
+
+.node-content {
+    display: flex;
+    align-items: center;
+}
+
+.toggle-icon {
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+/* .container.mt-1.mb-2.mainheader { */
+/* display: flex; */
+/* } */
+
+/* Add additional styling as needed */

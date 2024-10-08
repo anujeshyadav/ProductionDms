@@ -1,0 +1,118 @@
+// Core mixins
+@import "~bootstrap/scss/_functions.scss";
+@import "~bootstrap/scss/mixins";
+@import "../bootstrap-extended/mixins";
+
+// Core variables and mixins overrides
+@import "../core/variables/variables";
+@import "~bootstrap/scss/_variables.scss";
+
+// Overrides user variable
+@import "../core/variables/components-variables";
+
+// authentication pages background
+.bg-authentication {
+  background-color: $blank-bg-color;
+  .auth-title,
+  .vx-checkbox-con span,
+  .divider .divider-text {
+    color: $body-color;
+  }
+  .auth-footer {
+    padding: 0rem 1.5rem 0.5rem;
+    .footer-btn {
+      .btn {
+        padding: 0.87rem 1.2rem !important;
+        margin: 1rem 1rem 1rem 0rem;
+      }
+    }
+  }
+}
+
+.login-tabs-container {
+  min-height: 505px;
+}
+button.viewbuttonheading {
+  background-color: #ededed;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+// Unlock btn spacing in sm
+
+@media (max-width: 400px) {
+  .unlock-btn {
+    margin-top: 1rem;
+  }
+}
+.inputdataone {
+  width: 32px !important;
+  text-align: center;
+  height: 36px !important;
+}
+.otpinputtype.mb-2 {
+  width: 50px;
+}
+
+span.eyeviewpassword {
+  top: 4px;
+  right: 3px;
+}
+
+@media only screen and (max-width: 768px) {
+  .cssformobileveiwcrm {
+    font-size: 11px;
+  }
+}
+.colorful {
+  width: 31.4px;
+  height: 31.4px;
+  border-radius: 50%;
+  background: #ffd82e;
+  transform-origin: top;
+  display: grid;
+  animation: colorful-3vgb5t 1s infinite linear;
+}
+
+.colorful::before,
+.colorful::after {
+  content: "";
+  grid-area: 1/1;
+  background: #ff6761;
+  border-radius: 50%;
+  transform-origin: top;
+  animation: inherit;
+  animation-name: colorful-k94uub;
+}
+
+.colorful::after {
+  background: #474bff;
+  --s: 180deg;
+}
+
+@keyframes colorful-3vgb5t {
+
+  0%,
+  20% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes colorful-k94uub {
+  50% {
+    transform: rotate(var(--s, 90deg));
+  }
+
+  100% {
+    transform: rotate(0);
+  }
+}
+
+.maindivLogin {
+  display: flex;
+  justify-content: center;
+  padding: 21%;
+}

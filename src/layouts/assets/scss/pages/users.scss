@@ -1,0 +1,245 @@
+/*** User pages ***/
+
+.users-avatar-shadow {
+  box-shadow: 2px 4px 14px 0 rgba(34, 41, 47, 0.4);
+}
+.css-1r4vtzz {
+  width: 100% !important;
+}
+
+// aggrid actions dropdown
+.actions-dropdown {
+  .btn-group .btn {
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.14) !important;
+    border-radius: 0.5rem !important;
+  }
+}
+// date picker width
+.react-datepicker-wrapper {
+  width: 100%;
+}
+
+[dir="ltr"] .year-picker {
+  text-align: left;
+  width: 100% !important;
+  height: 40px;
+}
+// User view Table
+.permissions-table {
+  td,
+  th {
+    padding: 0.5rem;
+  }
+}
+
+// User view info
+.users-page-view-table .user-info {
+  div {
+    padding: 0.5rem;
+  }
+  .user-info-title {
+    font-size: 16px;
+    min-width: 300px;
+  }
+}
+
+@media (max-width: 576px) {
+  .ag-grid-table {
+    .ag-paging-panel {
+      height: 160px;
+    }
+    .sort-dropdown {
+      margin-bottom: 1rem;
+    }
+  }
+}
+// multiselecetdropdown css Addition css
+
+.multiSelectContainer input {
+  margin-right: 10px !important;
+}
+.chip {
+  background-color: #0096fb;
+}
+
+// view order with invoice
+[dir] .table th,
+[dir] .table td {
+  padding: 9px !important;
+}
+
+// .table tr th td{
+//   border:1px solid #bb1717 ;
+// }
+
+input.form-control.myphoneinput {
+  width: 100%;
+}
+.tableheadingparts {
+  height: 263px;
+  overflow-y: scroll;
+}
+
+// policy css
+.mainDiv {
+  display: flex;
+}
+.child {
+  width: 100px;
+  margin: 0px 10px;
+}
+.dropdownselect {
+  width: 156px;
+}
+
+.userRegiBody.card-body {
+  // background-color: #ffffff;
+  background-color: #77a5f324 !important;
+  border-radius: 8px;
+  border: 1px dotted grey;
+  padding: 24px;
+  box-shadow: -9px 14px 13px -3px #a09d98;
+}
+
+input.form-control {
+  font-weight: 600;
+  border-radius: 9px !important;
+  font-size: 16px !important;
+  height: 52px !important;
+  padding: 5px 11px !important;
+}
+
+select.custom-select {
+  font-weight: 600;
+  border-radius: 9px !important;
+  font-size: 16px !important;
+  height: 52px !important;
+  padding: 5px 11px !important;
+}
+
+input#search_input {
+  font-weight: 600;
+  border-radius: 31px !important;
+  font-size: 14px !important;
+  height: 40px !important;
+  /* padding: 5px 39px !important; */
+}
+
+label {
+  font-size: 17px;
+}
+
+.file-upload {
+  text-align: center;
+
+  position: relative;
+  cursor: pointer;
+}
+
+.file-upload p {
+  font-size: 0.87rem;
+  margin-top: 10px;
+  color: #bbcada;
+}
+
+.file-upload input {
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+// .search-wrapper.searchWrapper {
+//   display: flex;
+// }
+// .searchWrapper {
+//   border: 1px solid #ccc;
+//   border-radius: 9px;
+//   height: 43px;
+//   padding: 0px;
+//   padding-left: 10px;
+//   background-color: white;
+//   overflow: auto;
+// }
+
+// by anujesh code for ag grid table pagination and slider
+
+.ag-cell.ag-cell-not-inline-editing.ag-cell-with-height.ag-cell-value {
+  display: flex;
+  justify-content: center;
+}
+
+.header-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ag-header-cell-label {
+  display: flex;
+  justify-content: center;
+}
+
+.ag-theme-material .ag-cell {
+  line-height: 40px !important;
+}
+
+.ag-theme-material .ag-row {
+  height: 40px !important;
+}
+
+.ag-body-horizontal-scroll {
+  top: -9px !important;
+  position: absolute !important;
+}
+
+[dir] .ag-theme-material .ag-header {
+  margin-top: 14px !important;
+  // background-color: #b73636;
+  border-bottom: 1px solid #ededed;
+}
+
+.content-wrapper {
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+  padding-top: 7px !important;
+}
+
+// .ag-paging-panel.ag-unselectable {
+//   display: none;
+// }
+[dir] select.custom-select {
+  height: 54px !important;
+  border-radius: 9px !important;
+  padding: 5px 12px !important;
+}
+.ag-header-cell.ag-header-cell-sortable {
+  top: 2px;
+
+}
+.ag-header-group-text {
+  margin-top: 8px;
+  color: black;
+  font-weight: 800 !important;
+  font-size: 12px !important;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+input.form-control {
+  height: 35px !important;
+}
+
+label {
+  text-transform: capitalize !important;
+}
+
+h2 {
+  text-transform: capitalize !important;
+}

@@ -1,0 +1,77 @@
+/* LedgerEntryList.css */
+.ledger-entry-list {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.entry-item {
+    list-style-type: none;
+    margin-bottom: 12px;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.entry-item div {
+    color: black;
+    display: flex;
+    justify-content: space-between;
+}
+
+.entry-items {
+    list-style-type: none;
+}
+
+.entry-items div {
+    color: black;
+    padding: 10px;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+}
+
+h2.company_heaeding {
+    margin-top: 60px;
+    font-weight: bold;
+    font-size: 31px;
+}
+
+h4.location {
+    font-weight: 900;
+    font-size: 24px;
+}
+
+h2.ledgertype {
+    font-size: 28px;
+}
+
+h2.ledgerDate {
+    font-size: 18px;
+    margin-top: 18px;
+    margin-bottom: 27px;
+}
+
+ul.Heading_of_ledger {
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    /* margin-bottom: 12px; */
+    /* padding: 10px; */
+}
+
+.headingsledger {
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.ledger_data {
+    font-size: 17px;
+    font-weight: 600;
+}
+
+p.lastfooter {
+    font-weight: 800;
+    font-size: 22px;
+    color: black;
+    margin-bottom: 8px;
+    margin-top: 8px;
+}

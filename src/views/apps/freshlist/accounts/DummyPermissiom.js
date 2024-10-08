@@ -1,0 +1,16 @@
+// export const permission = [
+//   { pagename: "Dashboard", permission: ["parentPermit", "View"] },
+//   { pagename: "Accounts", permission: ["parentPermit"] },
+//   { pagename: "Create Account", permission: ["View", "Create", "Edit"] },
+//   { pagename: "User List", permission: ["View", "Edit"] },
+//   { pagename: "Client Account", permission: ["View", "Create", "Delete"] },
+//   { pagename: "Accountant Account", permission: ["View", "Create"] },
+//   { pagename: "Create Role", permission: ["View", "Create"] },
+//   { pagename: "Role List", permission: ["View"] },
+//   { pagename: "Product", permission: ["parentPermit"] },
+//   { pagename: "Product List", permission: ["View", "Create"] },
+//   { pagename: "Add Product", permission: ["View", "Create"] },
+//   { pagename: "Type", permission: ["View", "Create"] },
+//   { pagename: "Assign To Client", permission: ["View"] },
+//   { pagename: "Rate Master", permission: ["View"] },
+// ];

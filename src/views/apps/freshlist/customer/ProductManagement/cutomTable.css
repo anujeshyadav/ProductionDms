@@ -1,0 +1,68 @@
+.sallerdetailborder1 {
+  padding: 1rem;
+}
+.borderinvoice {
+  border: 1px solid black;
+}
+.borderinvoiceMargn {
+  margin-top: -14px;
+}
+.borderinvoice1 {
+  border: 1px solid black;
+  border-top: none;
+}
+
+.sallerdetailborder0 {
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+  border-right: 1px solid black;
+}
+.sallerdetailborder01 {
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+.logoinvoicecss {
+  width: 100%;
+}
+.fontsizeinvoice {
+  font-size: 15px;
+}
+.cssforcolsmall {
+  padding-right: 1px !important;
+}
+.cssbginvoice {
+  background-color: #9baeca;
+  text-align: center;
+  border-bottom: 1px solid black;
+}
+
+.sectionpadding {
+  padding-left: 14px;
+  padding-bottom: 14px;
+}
+.cssforthtr th {
+  border: 1px solid black !important;
+  background-color: #6e6e6e;
+  color: black;
+}
+.cssforthtr1 th {
+  border: 1px solid black !important;
+  color: black;
+}
+.thwidth {
+  width: 5%;
+}
+.cssfortdtr td {
+  border: 1px solid black !important;
+}
+.cssfortdtr th {
+  border: 1px solid black !important;
+}
+.cssforgrandtotal {
+  display: flex;
+  justify-content: space-between;
+}
+.sallerdetailborder {
+  border-right: 1px solid black;
+  padding: 1rem;
+}

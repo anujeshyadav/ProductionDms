@@ -1,0 +1,14 @@
+@import "../node_modules/prismjs/themes/prism-tomorrow";
+@import "./assets/scss/app.scss";
+
+[dir] .chip {
+  background-color: #3d64a6;
+  border-radius: 1.428rem;
+  padding: 0 10px;
+  margin-bottom: 5px;
+}
+
+.LowStockcssheight {
+  height: 22rem !important;
+  overflow-x: auto;
+}

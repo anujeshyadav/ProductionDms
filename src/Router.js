@@ -723,6 +723,9 @@ const pricecalculaterproduction = lazy(() =>
 const productionprocesspage = lazy(() =>
   import("./views/apps/freshlist/Production/productionprocesspage")
 );
+const AllAddedProduct = lazy(() =>
+  import("./views/apps/freshlist/Production/AllAddedProduct")
+);
 const StartProduction = lazy(() =>
   import("./views/apps/freshlist/Production/StartProduction")
 );
@@ -2519,6 +2522,10 @@ class AppRouter extends React.Component {
           <AppRoute
             path="/views/apps/freshlist/Production/productionprocesspage"
             component={productionprocesspage}
+          />
+          <AppRoute
+            path="/views/apps/freshlist/Production/AllAddedProduct"
+            component={AllAddedProduct}
           />
           <AppRoute
             path="/views/apps/freshlist/Production/StartProduction/:id"

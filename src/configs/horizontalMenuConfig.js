@@ -1822,24 +1822,24 @@ const horizontalMenuConfig = [
             permissions: ["admin", "editor"],
             navLink: "/app/freshlist/house/ProductionTargetList",
           },
-          {
-            id: "productionprocess",
-            title: "Production Process",
-            type: "item",
-            icon: <FaList size={12} />,
-            permissions: ["admin", "editor"],
-            navLink: "/views/apps/freshlist/Production/productionprocesspage",
-          },
-          {
-            id: "wastagematerial",
-            title: "Wastage Material",
-            type: "item",
-            icon: <FaList size={12} />,
-            permissions: ["admin", "editor"],
-            navLink: "/views/apps/AjGroup/Production/Wastageproduction",
-            // navLink:
-            //   "/views/apps/freshlist/Production/wastagematerialproduction",
-          },
+          // {
+          //   id: "productionprocess",
+          //   title: "Production Process",
+          //   type: "item",
+          //   icon: <FaList size={12} />,
+          //   permissions: ["admin", "editor"],
+          //   navLink: "/views/apps/freshlist/Production/productionprocesspage",
+          // },
+          // {
+          //   id: "wastagematerial",
+          //   title: "Wastage Material",
+          //   type: "item",
+          //   icon: <FaList size={12} />,
+          //   permissions: ["admin", "editor"],
+          //   navLink: "/views/apps/AjGroup/Production/Wastageproduction",
+          //   // navLink:
+          //   //   "/views/apps/freshlist/Production/wastagematerialproduction",
+          // },
           // {
           //   id: "Material Return",
           //   title: "Material Return",
@@ -1850,15 +1850,15 @@ const horizontalMenuConfig = [
           //   // navLink:
           //   //   "/views/apps/freshlist/Production/wastagestockreturnproduction",
           // },
-          {
-            id: "pricecalculater",
-            title: "Price Calculater",
-            type: "item",
-            icon: <FaList size={12} />,
-            permissions: ["admin", "editor"],
-            navLink:
-              "/views/apps/freshlist/Production/pricecalculaterproduction",
-          },
+          // {
+          //   id: "pricecalculater",
+          //   title: "Price Calculater",
+          //   type: "item",
+          //   icon: <FaList size={12} />,
+          //   permissions: ["admin", "editor"],
+          //   navLink:
+          //     "/views/apps/freshlist/Production/pricecalculaterproduction",
+          // },
         ],
       },
 

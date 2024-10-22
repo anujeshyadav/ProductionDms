@@ -627,7 +627,6 @@ class ViewOnewarehouse extends React.Component {
   handleShowWarehouse = (e) => {
     e.preventDefault();
     if (this.state.warehouse != "NA") {
-      console.log(this.state.wareHouseViewOne[0]);
       let selecteddata = this.state.wareHouseViewOne?.filter(
         (ele, i) => ele?._id == this.state.warehouse
       );

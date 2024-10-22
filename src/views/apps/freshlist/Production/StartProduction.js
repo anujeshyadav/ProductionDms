@@ -129,7 +129,6 @@ const ProductionProcess = (args) => {
       (async () => {
         await _Get(VieW_Product_assignFor_Production_List, Params.id)
           .then((res) => {
-            debugger;
             if (res?.product?.step_No == 1) {
               _Get(PurchaseProductList_Product, userData?.database)
                 .then((res) => {
@@ -157,7 +156,6 @@ const ProductionProcess = (args) => {
             data.currentStepName = PreviousStep[0]?.step_Name;
 
             setData(data);
-            debugger;
             let currentProduct = res?.product.product_details?.map(
               (item) => item?.fProduct_name
             );
@@ -297,9 +295,15 @@ const ProductionProcess = (args) => {
   };
 
   const handleSelection = (selectedList, selectedItem, index, name) => {
-    let product = Product;
-    product[index][name] = selectedItem._id;
-    setProduct(product);
+    setProduct((prevProducts) => {
+      const updatedProducts = [...prevProducts];
+
+      updatedProducts[index][name] = selectedItem._id;
+      updatedProducts[index][
+        "stock"
+      ] = `${selectedItem.qty}(${selectedItem?.stockUnit})`;
+      return updatedProducts;
+    });
   };
   const handleChange = (e) => {
     let { name, value } = e.target;
@@ -816,6 +820,9 @@ const ProductionProcess = (args) => {
                           <Label>
                             Raw Material Name{" "}
                             <span style={{ color: "red" }}>*</span>
+                            <span style={{ color: "red", fontSize: "12px" }}>
+                              {product?.stock && <>Stock:{product?.stock}</>}
+                            </span>
                           </Label>
                           <Multiselect
                             className="choseeproduct"

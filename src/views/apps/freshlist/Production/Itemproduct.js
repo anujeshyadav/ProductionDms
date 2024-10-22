@@ -101,7 +101,7 @@ class Itemproduct extends React.Component {
           headerName: "Step No.",
           field: "item.step_No",
           filter: true,
-          // width: 200,
+          width: 80,
           cellRendererFramework: (params) => {
             debugger;
             return (

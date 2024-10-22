@@ -208,23 +208,36 @@ class ProductionTargetList extends React.Component {
         {
           headerName: "Next",
           field: "sortorder",
-          width: 180,
+          width: 220,
           cellRendererFramework: (params) => {
+        
             return (
               <div className="cursor-pointer">
                 {this.state.InsiderPermissions &&
                   this.state.InsiderPermissions?.Create && (
                     <>
-                      {params?.data?.isHighestStep && (
-                        <Badge color="primary">
-                          <Link
-                            title="Click to Go Next Step"
-                            color="primary"
-                            to={`/views/apps/freshlist/Production/NextStepProduction/${params?.data?._id}`}
-                            className="mx-1">
-                            + Step
-                          </Link>
-                        </Badge>
+                      {params?.data?.totalStep == params?.data?.step_No ? (
+                        <>
+                          <span style={{ color: "green" }}>
+                            {params.data?.processName?.name &&
+                              params.data?.processName?.name}{" "}
+                            Production Completed
+                          </span>
+                        </>
+                      ) : (
+                        <>
+                          {params?.data?.isHighestStep && (
+                            <Badge color="primary">
+                              <Link
+                                title="Click to Go Next Step"
+                                color="primary"
+                                to={`/views/apps/freshlist/Production/NextStepProduction/${params?.data?._id}`}
+                                className="mx-1">
+                                + Step
+                              </Link>
+                            </Badge>
+                          )}
+                        </>
                       )}
                     </>
                   )}
@@ -305,7 +318,6 @@ class ProductionTargetList extends React.Component {
     await _Get(Product_assignFor_Production_List, db)
       .then((res) => {
         const maxSteps = this.getMaxStepForProcesses(res?.product);
-        debugger;
         this.setState({ Loading: false });
         this.setState({
           rowData: maxSteps,

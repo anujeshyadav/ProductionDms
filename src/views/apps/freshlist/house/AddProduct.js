@@ -39,6 +39,7 @@ import {
   WareahouseList_For_addProduct,
 } from "../../../../ApiEndPoint/Api";
 import { MdCancel } from "react-icons/md";
+import AllAddedProduct from "../Production/AllAddedProduct";
 import { previousDay } from "date-fns";
 
 const AddProduct = () => {
@@ -58,17 +59,13 @@ const AddProduct = () => {
     category: "",
     SubCategory: "",
     warehouse: "",
-    // Unit: "",
     Product_Title: "",
     Size: "",
-    // discount: "",
     HSN_Code: "",
     GSTRate: "",
-    // Product_Desc: "",
     Product_image: "",
     Product_MRP: "",
     MIN_stockalert: "",
-    // gstPercentage: "",
     price: "",
     purchaseStatus: "",
     status: "",
@@ -1305,6 +1302,9 @@ const AddProduct = () => {
               </>
             )}
           </CardBody>
+          <div>
+            <AllAddedProduct />
+          </div>
         </Card>
 
         <Modal

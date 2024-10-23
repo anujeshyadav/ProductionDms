@@ -133,8 +133,8 @@ class ProductionTargetList extends React.Component {
               <div className="d-flex align-items-center cursor-pointer">
                 <div>
                   <span>
-                    {params.data?.step_name && params.data?.step_name} (
-                    {params.data?.step_No})
+                    {params.data?.step_No}{this.getOrdinalSuffix(params.data?.step_No)} {" "}
+                    {params.data?.step_name && params.data?.step_name}
                   </span>
                 </div>
               </div>
@@ -258,6 +258,20 @@ class ProductionTargetList extends React.Component {
       },
     };
   }
+ getOrdinalSuffix(number) {
+  let suffix = "th"; // Default suffix
+
+  if (number % 100 !== 11 && number % 10 === 1) {
+    suffix = "st";
+  } else if (number % 100 !== 12 && number % 10 === 2) {
+    suffix = "nd";
+  } else if (number % 100 !== 13 && number % 10 === 3) {
+    suffix = "rd";
+  }
+
+  // return `${number}${suffix}`;
+  return <sup>{suffix}</sup>;
+}
 
   LookupviewStart = () => {
     this.setState((prevState) => ({

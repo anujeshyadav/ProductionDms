@@ -86,6 +86,8 @@ export const View_Wareahouse_id = "/user/view-user/";
 export const WareahouseList_For_addProduct =
   "/warehouse/view-warehouse-product/";
 export const View_Wareahouse_Byid = "/warehouse/view-warehouse-by-id/";
+export const ViewRawProduct_Wareahouse_Byid =
+  "/warehouse/view-warehouse-by-id-rowproduct/";
 export const Update_Wareahouse_Byid = "/warehouse/update-warehouse/";
 export const Create_Warehouse_List = "/warehouse/view-warehouse/";
 export const Warehouse_ListBy_id = "/warehouse/view-warehouse-list-incharge/";

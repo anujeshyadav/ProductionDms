@@ -51,6 +51,7 @@ import {
   Create_Warehouse_List,
   Delete_WareHouse,
   View_Wareahouse_Byid,
+  ViewRawProduct_Wareahouse_Byid,
 } from "../../../../../ApiEndPoint/Api";
 import SuperAdminUI from "../../../../SuperAdminUi/SuperAdminUI";
 
@@ -73,7 +74,6 @@ class ViewOnewarehouse extends React.Component {
       SelectedCols: [],
       paginationPageSize: 15,
       InsiderPermissions: {},
-
       currenPageSize: "",
       getPageSize: "",
       columnDefs: [
@@ -321,12 +321,18 @@ class ViewOnewarehouse extends React.Component {
   async Apicalling(ids, db) {
     this.setState({ Loading: true });
     let { id } = this.props.match.params;
+    // await _Get(ViewRawProduct_Wareahouse_Byid, id)
     await _Get(View_Wareahouse_Byid, id)
       .then((res) => {
         this.setState({ Loading: false });
         let value = res?.Warehouse;
         if (value?.productItems?.length) {
-          this.setState({ rowData: value?.productItems, rowAllData: value });
+          let Product = value?.productItems?.filter(
+            (i) => i?.productId !== null
+          );
+          console.log(Product);
+          debugger;
+          this.setState({ rowData: Product, rowAllData: value });
         }
         let userHeading = JSON.parse(
           localStorage.getItem("warehouseProductStock")
@@ -627,6 +633,7 @@ class ViewOnewarehouse extends React.Component {
   handleShowWarehouse = (e) => {
     e.preventDefault();
     if (this.state.warehouse != "NA") {
+      console.log(this.state.wareHouseViewOne[0]);
       let selecteddata = this.state.wareHouseViewOne?.filter(
         (ele, i) => ele?._id == this.state.warehouse
       );

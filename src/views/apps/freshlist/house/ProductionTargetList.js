@@ -123,17 +123,35 @@ class ProductionTargetList extends React.Component {
           },
         },
         {
-          headerName: "step Name",
-          field: "step_name",
+          headerName: "step No",
+          field: "step_No",
           filter: true,
-          width: 200,
+          width: 120,
           editable: true,
           cellRendererFramework: (params) => {
             return (
               <div className="d-flex align-items-center cursor-pointer">
                 <div>
                   <span>
-                    {params.data?.step_No}{this.getOrdinalSuffix(params.data?.step_No)} {" "}
+                    {params.data?.step_No}
+                    {this.getOrdinalSuffix(params.data?.step_No)}{" "}
+                  </span>
+                </div>
+              </div>
+            );
+          },
+        },
+        {
+          headerName: "step Name",
+          field: "step_name",
+          filter: true,
+          width: 120,
+          editable: true,
+          cellRendererFramework: (params) => {
+            return (
+              <div className="d-flex align-items-center cursor-pointer">
+                <div>
+                  <span>
                     {params.data?.step_name && params.data?.step_name}
                   </span>
                 </div>
@@ -210,7 +228,6 @@ class ProductionTargetList extends React.Component {
           field: "sortorder",
           width: 220,
           cellRendererFramework: (params) => {
-        
             return (
               <div className="cursor-pointer">
                 {this.state.InsiderPermissions &&

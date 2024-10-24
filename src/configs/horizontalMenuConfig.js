@@ -344,14 +344,14 @@ const horizontalMenuConfig = [
         permissions: ["admin", "editor"],
         navLink: "/app/rupioo/CustomerTarget/0",
       },
-      {
-        id: "Promotional Activity",
-        title: "Promotional Activity",
-        type: "item",
-        icon: <FaRunning size={22} />,
-        permissions: ["admin", "editor"],
-        navLink: "/app/AjGroup/PromotionalActivityList",
-      },
+      // {
+      //   id: "Promotional Activity",
+      //   title: "Promotional Activity",
+      //   type: "item",
+      //   icon: <FaRunning size={22} />,
+      //   permissions: ["admin", "editor"],
+      //   navLink: "/app/AjGroup/PromotionalActivityList",
+      // },
       {
         id: "Auto Billing Lock",
         title: "Auto Billing Lock",

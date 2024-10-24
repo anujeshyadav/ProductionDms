@@ -97,27 +97,27 @@ class Itemproduct extends React.Component {
         suppressMenu: true,
       },
       columnDefs: [
-        {
-          headerName: "Step No.",
-          field: "item.step_No",
-          filter: true,
-          width: 80,
-          cellRendererFramework: (params) => {
-            debugger;
-            return (
-              <div>
-                <span>
-                  {params.data?.item?.step_No && params.data?.item?.step_No}
-                </span>
-              </div>
-            );
-          },
-        },
+        // {
+        //   headerName: "Step No.",
+        //   field: "item.step_No",
+        //   filter: true,
+        //   width: 80,
+        //   cellRendererFramework: (params) => {
+          
+        //     return (
+        //       <div>
+        //         <span>
+        //           {params.data?.item?.step_No && params.data?.item?.step_No}
+        //         </span>
+        //       </div>
+        //     );
+        //   },
+        // },
 
         {
           headerName: "Actions",
           field: "transactions",
-          // width: 180,
+          width: 120,
           cellRendererFramework: (params) => {
             return (
               <div className="actions cursor-pointer">
@@ -188,10 +188,29 @@ class Itemproduct extends React.Component {
           },
         },
         {
+          headerName: "Step Number",
+          field: "item?.step_No",
+          filter: true,
+          width: 200,
+          cellRendererFramework: (params) => {
+            return (
+              <div>
+                <span>
+                  {params.data?.item?.step_No}
+                  {this.getOrdinalSuffix(params.data?.item?.step_No)} 
+                  {/* Out Of {" "}
+                  {params?.data?.steps?.length}
+                  {this.getOrdinalSuffix(params?.data?.steps?.length)} */}
+                </span>
+              </div>
+            );
+          },
+        },
+        {
           headerName: "Step Name",
           field: "item?.step_Name",
           filter: true,
-          // width: 200,
+          width: 200,
           cellRendererFramework: (params) => {
             return (
               <div>
@@ -217,6 +236,20 @@ class Itemproduct extends React.Component {
         },
       ],
     };
+  }
+  getOrdinalSuffix(number) {
+    let suffix = "th"; // Default suffix
+
+    if (number % 100 !== 11 && number % 10 === 1) {
+      suffix = "st";
+    } else if (number % 100 !== 12 && number % 10 === 2) {
+      suffix = "nd";
+    } else if (number % 100 !== 13 && number % 10 === 3) {
+      suffix = "rd";
+    }
+
+    // return `${number}${suffix}`;
+    return <sup>{suffix}</sup>;
   }
   toggleModal = () => {
     this.setState((prevState) => ({
@@ -254,11 +287,11 @@ class Itemproduct extends React.Component {
     await _Get(List_Steps_Of_Production, id)
       .then((res) => {
         let whole = res?.steps?.flatMap((ele) => {
-          return ele?.steps?.map((item) => {
+          return ele?.steps?.map((item,index) => {
+      
             return { ...ele, item: item };
           });
         });
-        console.log(whole);
         if (whole?.length) {
           this.setState({ rowData: whole });
           this.setState({ rowAllData: whole });
